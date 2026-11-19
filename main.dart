@@ -1,24 +1,13 @@
 import 'dart:io';
-void main () { 
-  print("Введите нужную вам операцию (+;-;*;/):");
-String operation = stdin.readLineSync ()!;
+void main ()
+{
+double price = 13000;
+double discount = 25;
 
-  print("Введите первое число...");
-int num1 = int.parse(stdin.readLineSync ()!);
-  print("Введите второе число...");
-int num2 = int.parse(stdin.readLineSync ()!);
+double discountAmount = price * discount / 100;
+double finalPrice = price - discountAmount;
 
-if (operation == "+") {
-  print("Результат: ${num1 + num2}");
-}
-else if (operation == "-") {
-  print("Результат: ${num1 - num2}");
-}
-else if (operation == "*") {
-  print("Результат: ${num1 * num2}");
-}
-else if (operation == "/") {
-  print("Результат: ${num1 / num2}");
-if (num2 == 0)
-  print("Ошибка,на 0 делить нельзя");}
+print("Цена без скидки: $price тг");
+print("Размер скидки: $discountAmount тг");
+print("Итоговая стоимость со скидкой: $finalPrice тг");
 }
